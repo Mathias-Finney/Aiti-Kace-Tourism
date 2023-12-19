@@ -9,23 +9,23 @@
             @csrf
             <span style="color: red">Fields with * are mandatory</span>
             <div class="col-md-6">
-            <label for="username" class="form-label">Username <span style="color: red">*</span></label>
+            <label for="username" class="form-label">Username <span style="color: red">**</span></label>
             <input type="text" name="username" class="@error('username') is-invalid @enderror form-control" id="username" value="{{old('username')}}" required>
             
             @error('username')<div class="invalid-feedback">{{$message}}</div>@enderror
             </div>
             <div class="col-md-6">
-            <label for="email" class="form-label">Email <span style="color: red">*</span></label>
+            <label for="email" class="form-label">Email <span style="color: red">**</span></label>
             <input type="email" name="email" class="@error('email') is-invalid @enderror form-control" id="email" value="{{old('email')}}" required>
             @error('email')<div class="invalid-feedback">{{$message}}</div>@enderror
             </div>
             <div class="col-md-6">
-            <label for="password" class="form-label">Password <span style="color: red">*</span></label>
+            <label for="password" class="form-label">Password <span style="color: red">**</span></label>
             <input type="password" name="password" class="@error('password') is-invalid @enderror form-control" id="password" required>
             @error('password')<div class="invalid-feedback">{{$message}}</div>@enderror
             </div>
             <div class="col-md-6">
-            <label for="password" class="form-label">Confirm Password <span style="color: red">*</span></label>
+            <label for="password" class="form-label">Confirm Password <span style="color: red">**</span></label>
             <input type="password" name="password_confirmation" class="@error('password_confirmation') is-invalid @enderror form-control" id="password"  required>
             @error('password_confirmation')<div class="invalid-feedback">{{$message}}</div>@enderror
             </div>
