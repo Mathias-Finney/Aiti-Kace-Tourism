@@ -7,6 +7,7 @@
         <hr>
         <form class="row g-3" method="post" action="{{ route('register')}}">
             @csrf
+            <span style="color: red">Fields with * are mandatory</span>
             <div class="col-md-6">
             <label for="username" class="form-label">Username <span style="color: red">*</span></label>
             <input type="text" name="username" class="@error('username') is-invalid @enderror form-control" id="username" value="{{old('username')}}" required>
