@@ -50,6 +50,11 @@
     <!-- Navbar & Hero Start -->
     @include('layout.navbar')
     <!-- Navbar & Hero End -->
+    @if (session('status'))
+    <div class="alert alert-{{session('status')}}">
+        {{ session('message') }}
+    </div>
+    @endif
 
     @yield('content')
 

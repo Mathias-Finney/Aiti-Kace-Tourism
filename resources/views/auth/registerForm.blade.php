@@ -8,13 +8,13 @@
         <form class="row g-3" method="post" action="{{ route('register')}}">
             @csrf
             <span style="color: red">Fields with * are mandatory</span>
-            <div class="col-md-6">
+            <div class="col-md-12">
             <label for="username" class="form-label">Username <span style="color: red">**</span></label>
             <input type="text" name="username" class="@error('username') is-invalid @enderror form-control" id="username" value="{{old('username')}}" required>
             
             @error('username')<div class="invalid-feedback">{{$message}}</div>@enderror
             </div>
-            <div class="col-md-6">
+            <div class="col-md-12">
             <label for="email" class="form-label">Email <span style="color: red">**</span></label>
             <input type="email" name="email" class="@error('email') is-invalid @enderror form-control" id="email" value="{{old('email')}}" required>
             @error('email')<div class="invalid-feedback">{{$message}}</div>@enderror
@@ -29,7 +29,7 @@
             <input type="password" name="password_confirmation" class="@error('password_confirmation') is-invalid @enderror form-control" id="password"  required>
             @error('password_confirmation')<div class="invalid-feedback">{{$message}}</div>@enderror
             </div>
-            <div class="col-6">
+            {{-- <div class="col-6">
             <label for="address1" class="form-label">Address</label>
             <input type="text" name="address1" class=" @error('address1') is-invalid @enderror form-control" id="address1" value="{{old('address1')}}">
             @error('address1')<div class="invalid-feedback">{{$message}}</div>@enderror
@@ -58,7 +58,7 @@
             <label for="mobile" class="form-label">Mobile</label>
             <input type="text" name="mobile" class="@error('mobile') is-invalid @enderror form-control" id="mobile" value="{{old('mobile')}}">
             @error('mobile')<div class="invalid-feedback">{{$message}}</div>@enderror
-            </div>
+            </div> --}}
             <div class="col-md-">
             <label for="mobile" class="form-label">Profile Picture</label>
             <input type="file" name="profile_image" class="@error('profile_image') is-invalid @enderror form-control" id="profile_image" value="{{old('profile_image')}}">

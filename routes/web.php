@@ -25,3 +25,6 @@ Route::get('/login-form', [AuthController::class, 'LoginUser'])->name('auth.logi
 Route::post('/User-login', [AuthController::class, 'UserLogin'])->name('login')->middleware('guest');
 
 Route::post('/logout-user', [AuthController::class, 'logoutUser'])->name('logout-user')->middleware('auth');
+
+//EMAIL VERIFICATION
+Route::get('verify/{token}', [AuthController::class, 'verify'])->name('verify');
